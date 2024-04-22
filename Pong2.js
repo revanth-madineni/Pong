@@ -39,14 +39,22 @@ class PongGame extends netplayjs.Game {
         // Apply the velocity to the appropriate player.
         if (player.getID() == 0) {
           //this.player1Y += vel.x * 5;
-         
-              this.player1Y -= vel.y * 5;
-        
+              if(vel.y > 0 && this.player1Y >0){
+                  this.player1Y -= vel.y * 5;
+              }
+              else if(vel.y < 0 && this.player1Y < 500){
+                  this.player1Y -= vel.y * 5;
+              }
           
         } else if (player.getID() == 1) {
           //this.bPos.x += vel.x * 5;
-          
-              this.player2Y -= vel.y * 5;
+              if(vel.y > 0 && this.player2Y >0){
+                  this.player2Y -= vel.y * 5;
+              }
+              else if(vel.y < 0 && this.player2Y < 500){
+                  this.player2Y -= vel.y * 5;
+              }
+             
           
         }
       }
