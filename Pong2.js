@@ -34,7 +34,7 @@ class PongGame extends netplayjs.Game {
     tick(playerInputs) {
       for (const [player, input] of playerInputs.entries()) {
         // Generate player velocity from input keys.
-        const vel = input.arrowKeys();
+        const vel = input.wasd();
        
         // Apply the velocity to the appropriate player.
         if (player.getID() == 0) {
