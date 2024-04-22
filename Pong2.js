@@ -9,8 +9,8 @@ class PongGame extends netplayjs.Game {
         // Ball properties
         this.ballX = canvas.width / 2;
         this.ballY = canvas.height / 2 ;
-        this.ballSpeedX = 5;
-        this.ballSpeedY = 5;
+        this.ballSpeedX = 3;
+        this.ballSpeedY = 3;
         this.ballRadius = 10;
 
         // Paddle properties
