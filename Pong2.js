@@ -42,7 +42,7 @@ class PongGame extends netplayjs.Game {
               if(vel.y > 0 && this.player1Y >0){
                   this.player1Y -= vel.y * 5;
               }
-              else if(vel.y < 0 && this.player1Y < 500){
+              else if(vel.y < 0 && this.player1Y < 300){
                   this.player1Y -= vel.y * 5;
               }
           
@@ -51,7 +51,7 @@ class PongGame extends netplayjs.Game {
               if(vel.y > 0 && this.player2Y >0){
                   this.player2Y -= vel.y * 5;
               }
-              else if(vel.y < 0 && this.player2Y < 500){
+              else if(vel.y < 0 && this.player2Y < 300){
                   this.player2Y -= vel.y * 5;
               }
              
@@ -65,7 +65,7 @@ class PongGame extends netplayjs.Game {
         }
 
         // WALL collisison
-        if (this.ballY - this.ballRadius < 0 || this.ballY + this.ballRadius > 600) {
+        if (this.ballY - this.ballRadius < 0 || this.ballY + this.ballRadius > 400) {
             this.ballSpeedY = -this.ballSpeedY;
         }
 
@@ -86,7 +86,7 @@ class PongGame extends netplayjs.Game {
                 this.checkWin();
 
             }
-        } else if (this.ballX + this.ballRadius > 600 - this.paddleWidth) {
+        } else if (this.ballX + this.ballRadius > 400 - this.paddleWidth) {
             if (this.ballY > this.player2Y && this.ballY < this.player2Y + this.paddleHeight) {
                 this.ballSpeedX = -this.ballSpeedX;
                 //this.playPaddleSound()
@@ -145,7 +145,7 @@ class PongGame extends netplayjs.Game {
     
         
         this.ballX = 300;
-        this.ballY = 300;
+        this.ballY = 200;
         this.ballSpeedX = -this.ballSpeedX;
 
         //this.move_ball = false;
@@ -173,7 +173,7 @@ class PongGame extends netplayjs.Game {
 }
   
 PongGame.timestep = 1000 / 60; // Our game runs at 60 FPS
-PongGame.canvasSize = { width: 600, height: 600 };
+PongGame.canvasSize = { width: 600, height: 400 };
   
   // Because our game can be easily rewound, we will use Rollback netcode
   // If your game cannot be rewound, you should use LockstepWrapper instead.
