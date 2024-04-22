@@ -81,7 +81,7 @@ class PongGame extends netplayjs.Game {
         } else if (this.ballX + this.ballRadius > 600 - this.paddleWidth) {
             if (this.ballY > this.player2Y && this.ballY < this.player2Y + this.paddleHeight) {
                 this.ballSpeedX = -this.ballSpeedX;
-                this.playPaddleSound()
+                //this.playPaddleSound()
             } else {
                 this.player1Score++;
 
