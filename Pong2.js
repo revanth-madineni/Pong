@@ -5,7 +5,7 @@ class PongGame extends netplayjs.Game {
 
         const canvas = /** @type {HTMLCanvasElement} */ (document.getElementById("canvas1"));
        
-        const paddleSound = document.getElementById("paddleSound");
+        //const paddleSound = document.getElementById("paddleSound");
         // Ball properties
         this.ballX = canvas.width / 2;
         this.ballY = canvas.height / 2 ;
@@ -62,7 +62,7 @@ class PongGame extends netplayjs.Game {
             //when hits paddle
             if (this.ballY > this.player1Y && this.ballY < this.player1Y + this.paddleHeight) {
                 this.ballSpeedX = -this.ballSpeedX;
-                this.playPaddleSound()
+                //this.playPaddleSound()
 
             //they scored
             } else {
@@ -152,10 +152,10 @@ class PongGame extends netplayjs.Game {
         }
     }
 
-    playPaddleSound() {
-        this.paddleSound.currentTime = 0; 
-        this.paddleSound.play();
-    }
+    //playPaddleSound() {
+        //this.paddleSound.currentTime = 0; 
+        //this.paddleSound.play();
+    //}
 
 }
   
