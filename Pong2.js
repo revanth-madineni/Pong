@@ -135,8 +135,8 @@ class PongGame extends netplayjs.Game {
         this.ballY = 300;
         this.ballSpeedX = -this.ballSpeedX;
 
-        this.move_ball = false;
-        setTimeout(()=>{this.move_ball= true},2000)
+        //this.move_ball = false;
+        //setTimeout(()=>{this.move_ball= true},2000)
     
 
     }
